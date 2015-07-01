@@ -1,6 +1,6 @@
 sudo: required
 language: cpp
 before_install:
-    - sudo apt-get update && sudo apt-get install -y qt5-qmake libboost-test-dev
+    - sudo apt-get update && sudo apt-get install -y qt4-qmake libboost-test-dev
 script:
     - for comp in "g++" "clang" do echo $comp; done
