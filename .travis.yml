@@ -1,11 +1,6 @@
 sudo: required
 language: cpp
-compiler:
-    - clang
-    env: MAKESPEC=linux-clang
-    - gcc
-    env: MAKESPEC=linux-g++
 before_install:
     - sudo apt-get update && sudo apt-get install -y qt5-qmake libboost-test-dev
 script:
-    - echo $MAKESPEC
+    - for comp in "g++" "clang" do echo $comp; done
