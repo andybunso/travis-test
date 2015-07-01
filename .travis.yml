@@ -1,0 +1,3 @@
+language: cpp
+script:
+    gcc test.cpp -o test && test
