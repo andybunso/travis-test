@@ -1,6 +1,6 @@
 sudo: required
 language: cpp
 before_install:
-    - sudo apt-get update && sudo apt-get install -y qt4-qmake libboost-test-dev
+    - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y && sudo apt-get update -q && sudo apt-get install qbs -y
 script:
-    - set -ev; MAKESPECS=(g++); for MK in "${MAKESPECS[@]}"; do mkdir qmake-linux-$MK; cd qmake-linux-$MK; qmake -spec linux-$MK ../travistest.pro; make; ./travistest; cd ..; done
+    - qbs -v
