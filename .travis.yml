@@ -1,6 +1,8 @@
 sudo: required
 language: cpp
 before_install:
-    - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y && sudo apt-get update -q && sudo apt-get install qbs -y
+    - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y && sudo apt-get update -q && sudo apt-get install libqt5script5 libqt5widgets5 -y
+install:
+    - mkdir qbsbuild && cd qbsbuild && wget http://download.qt.io/official_releases/qbs/1.4.0/qbs-1.4.0.src.zip && tar -xzf qbs* && cd qbs* && qmake -r qbs.pro && make && cd ../..
 script:
-    - qbs -v
+    - echo "none"
