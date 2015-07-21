@@ -1,10 +1,11 @@
-sudo: required
+sudo: false
 language: cpp
+
 before_install:
-    - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y && sudo apt-get update -q && sudo apt-get install locate qtchooser qt5-qmake -y
-    - export QT_SELECT=qt5
-    - sudo updatedb
-    - locate boost
-    - ls -la
+    - chmod u+x ./ghscript.sh
+
 script:
     - echo "none"
+
+after_success:
+    - ./ghscript.sh
