@@ -14,6 +14,7 @@ before_install:
     
 script:
     - g++ -v
+    - g++-4.9 -v
 
 after_success:
     - ./ghscript.sh
