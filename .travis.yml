@@ -10,7 +10,8 @@ addons:
 
 before_install:
     - chmod u+x ./ghscript.sh
-
+    - find /usr/bin -type f -name "g++*"
+    
 script:
     - g++ -v
 
