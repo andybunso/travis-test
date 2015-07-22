@@ -3,6 +3,7 @@ language: cpp
 
 before_install:
     - chmod u+x ./ghscript.sh
+    - locate g++
 
 script:
     - echo "none"
