@@ -7,15 +7,12 @@ addons:
         - ubuntu-toolchain-r-test
         packages:
         - g++-4.9
-        - g++-4.9:i386
 
 before_install:
     - chmod u+x ./ghscript.sh
-    - find /usr/bin -type f -name "g++*"
     
 script:
     - g++ -v
-    - g++-4.9 -v
     - ls -la 
     - echo $HOME
     - ls -la $HOME
