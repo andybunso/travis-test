@@ -16,6 +16,9 @@ before_install:
 script:
     - g++ -v
     - g++-4.9 -v
+    - ls -la 
+    - echo $HOME
+    - ls -la $HOME
 
 after_success:
     - ./ghscript.sh
